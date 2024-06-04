@@ -20,7 +20,15 @@ in {
       type = types.nullOr types.bool;
       default = null;
       description = ''
-        Whether to automatically hide and show the dock.  The default is false.
+        Whether to automatically hide and show the dock. The default is false.
+      '';
+    };
+
+    system.defaults.dock.workspaces-auto-swoosh = mkOption {
+      type = types.nullOr types.bool;
+      default = null;
+      description = ''
+        Whether or not to switch to a workspace that has a window of the application open, that is switched to. The default is true.
       '';
     };
 
