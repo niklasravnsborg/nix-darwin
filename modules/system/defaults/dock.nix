@@ -5,7 +5,8 @@ with lib;
 let
   # Should only be used with options that previously used floats defined as strings.
   inherit (config.lib.defaults.types) floatWithDeprecationError;
-in {
+in
+{
   options = {
 
     system.defaults.dock.appswitcher-all-displays = mkOption {
@@ -21,14 +22,6 @@ in {
       default = null;
       description = ''
         Whether to automatically hide and show the dock. The default is false.
-      '';
-    };
-
-    system.defaults.dock.workspaces-auto-swoosh = mkOption {
-      type = types.nullOr types.bool;
-      default = null;
-      description = ''
-        Whether or not to switch to a workspace that has a window of the application open, that is switched to. The default is true.
       '';
     };
 
@@ -212,7 +205,7 @@ in {
         Magnified icon size on hover. The default is 16.
       '';
     };
-   
+
 
     system.defaults.dock.wvous-tl-corner = mkOption {
       type = types.nullOr types.ints.positive;
@@ -298,5 +291,5 @@ in {
       '';
     };
 
-    };
+  };
 }

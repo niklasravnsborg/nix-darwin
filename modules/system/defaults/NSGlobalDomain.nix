@@ -101,7 +101,7 @@ in
       type = types.nullOr types.bool;
       default = true;
       description = ''
-        When switching to an application, switch to a Space with open windows for the application. The default is true.
+        Whether or not to switch to a workspace that has a window of the application open, that is switched to. The default is true.
       '';
     };
 
