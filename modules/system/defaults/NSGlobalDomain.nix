@@ -5,7 +5,8 @@ with lib;
 let
   # Should only be used with options that previously used floats defined as strings.
   inherit (config.lib.defaults.types) floatWithDeprecationError;
-in {
+in
+{
   options = {
 
     system.defaults.NSGlobalDomain.AppleShowAllFiles = mkOption {
@@ -93,6 +94,14 @@ in {
       default = null;
       description = ''
         Jump to the spot that's clicked on the scroll bar. The default is false.
+      '';
+    };
+
+    system.defaults.NSGlobalDomain.AppleSpacesSwitchOnActivate = mkOption {
+      type = types.nullOr types.bool;
+      default = true;
+      description = ''
+        When switching to an application, switch to a Space with open windows for the application. The default is true.
       '';
     };
 
